@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Model="clr-namespace:ExParcial5460.Model5460"
+             xmlns:Vm="clr-namespace:ExParcial5460.ViewModel5460"
+             x:Class="ExParcial5460.View5460.Principal5460">
+    <ContentPage.Content>
+        <Grid BackgroundColor="LightGray">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="120"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="120"/>
+            </Grid.RowDefinitions>
+
+            <Frame Grid.Row="0" BackgroundColor="LightGray" WidthRequest="20" HeightRequest="20"  HasShadow="False">
+                <Image Source="https://dewey.tailorbrands.com/production/brand_version_mockup_image/397/7186964397_20d748d9-3008-4be5-8b8d-2921363dcfd6.png?cb=1651164659" WidthRequest="20" HeightRequest="20"/>
+            </Frame>
+
+            <ScrollView Grid.Row="3" BackgroundColor="#e6e8fd" Orientation="Vertical">
+                <Grid VerticalOptions="Start">
+                    <Frame BackgroundColor="#ebf0ff"  HasShadow="False">
+                        <Label FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Credito:"/>
+                                    <Span Text="0" TextColor="Blue"/>
+                                    <Span Text="$" TextColor="Blue"/>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </Frame>
+                </Grid>
+            </ScrollView>
+
+            <ScrollView Grid.Row="4" BackgroundColor="#e6e8fd" Orientation="Vertical">
+                <Grid VerticalOptions="Start">
+                    <StackLayout>
+
+                        <Button Text="Transacciones" BackgroundColor="GhostWhite" FontSize="Medium" CornerRadius="10"/>
+                        <Button Text="test" BackgroundColor="GhostWhite" FontSize="Medium" CornerRadius="10"/>
+                        <Button Text="test" BackgroundColor="GhostWhite" FontSize="Medium" CornerRadius="10"/>
+                    </StackLayout>
+                </Grid>
+            </ScrollView>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

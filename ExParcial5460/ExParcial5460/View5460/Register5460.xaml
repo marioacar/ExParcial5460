@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Model="clr-namespace:ExParcial5460.Model5460"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:Vm="clr-namespace:ExParcial5460.ViewModel5460"
+             x:Class="ExParcial5460.View5460.Register5460"
+             x:DataType="Vm:RegisterViewModel5460"
+             x:Name="thisRegisterPage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+
+            <ScrollView Grid.Row="1" BackgroundColor="LightGray">
+                <StackLayout Margin="10" VerticalOptions="StartAndExpand">
+                    <Entry 
+                        x:Name="NameText"
+                        Text="{Binding NameText, Mode=TwoWay}"
+                        Placeholder="Nombre de usuario">
+                        <Entry.Behaviors>
+                            <xct:EventToCommandBehavior
+                                EventName="TextChange"
+                                Command="{Binding cmdINameValidation}"/>
+                        </Entry.Behaviors>
+                    </Entry>
+                    <Entry 
+                        x:Name="FLastNameText"
+                        Text="{Binding FLastNameText, Mode=TwoWay}"
+                        Placeholder="Apellido Paterno">
+                        <Entry.Behaviors>
+                            <xct:EventToCommandBehavior
+                                EventName="TextChange"
+                                Command="{Binding cmdIFLastNameValidation}"/>
+                        </Entry.Behaviors>
+                    </Entry>
+                    <Entry 
+                        x:Name="MLastNameText"
+                        Text="{Binding MLastNameText, Mode=TwoWay}"
+                        Placeholder="Apellido Materno">
+                        <Entry.Behaviors>
+                            <xct:EventToCommandBehavior
+                                EventName="TextChange"
+                                Command="{Binding cmdIMLastNameValidation}"/>
+                        </Entry.Behaviors>
+                    </Entry>
+
+                    
+                    <Button Text="Crear nuevo usuario" 
+                            BackgroundColor="Gray"
+                            TextColor="White"
+                            CornerRadius="20"
+                            Command="{Binding cmdIBtnRegister}"></Button>
+                </StackLayout>
+            </ScrollView>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
